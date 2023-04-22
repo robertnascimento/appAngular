@@ -9,13 +9,32 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class CardComponent implements OnInit{
 
   constructor(
-    private navegador:Router
-  ){}
+    private activeRoute: ActivatedRoute,
+    private navegador: Router
+  ){
+    this.activeRoute.params.subscribe(
+      res => console.log(res)
+    )  
+
+    //recupera um parametro da rota, mas n resgata valor algum
+
+    this.activeRoute.firstChild?.params.subscribe(
+      res => console.log(res)
+    ) 
+
+    //recupera um parametro da rota e resgata os valores
+
+    this.activeRoute.queryParams.subscribe(
+      res => console.log(res)
+    ) 
+    //resgata mais de um paramentros da rota, mas n resgata os valores
+  }
 
   ngOnInit(): void {
+
     setInterval(()=>{
       this.navegador.navigate(['/'])
-    },3000)
-    //seta um intervalo de redirecionamento para uma rota especificada
+    },50000)
+    //define um intervalo para redirecionar para outra pág 
   }
 }
