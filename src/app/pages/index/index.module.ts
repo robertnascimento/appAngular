@@ -5,10 +5,10 @@ import { TitleComponent } from './title/title.component';
 
 
 @NgModule({
-  declarations: [
+  declarations:[
     TitleComponent
   ],
-  exports: [
+  exports:[
     TitleComponent
   ],
   imports: [
