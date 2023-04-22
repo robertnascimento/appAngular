@@ -9,12 +9,14 @@ import { IndexModule } from './pages/index/index.module';
 import { CompAtributosComponent } from './comp-atributos/comp-atributos.component';
 
 import { AppComponent } from './app.component';
+import { MenuComponent } from './shared/menu/menu.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     CompAtributosComponent,
+    MenuComponent,
   ],
   imports: [
     BrowserModule,
