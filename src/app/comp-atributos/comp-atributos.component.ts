@@ -5,6 +5,7 @@ import { Component } from '@angular/core';
   templateUrl: './comp-atributos.component.html',
   styleUrls: ['./comp-atributos.component.css']
 })
+
 export class CompAtributosComponent {
   estilo:string = 'disable'
   corFundo: String = 'purple'
